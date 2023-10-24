@@ -5,10 +5,38 @@
     <h1>ITEMS AUTOMATION</h1>
     
     <div class="add-item">
-        <form action="#" method="post">
-            <input type="text" name="item" placeholder="Search Item..."> 
-            <button type="submit" class="btn btn-success" value="submit">Add</button>
+        <form action="{{url_for('home.addItem')}}" method="post">
+            <div class="add-box">
+                <input type="text" name="item" placeholder="Search Item..."> 
+                <button type="submit" class="btn btn-success" value="submit">Add</button>
+            </div>
         </form>
+    </div>
+
+
+    <div class="item-list">
+        <form method="post" action="{{url_for('home.itemList')}}">
+            <div class="table-responsive">
+                <table class="table">
+                    <tbody>
+                        {% for item_tuple in item_list %}
+                            {% for item in item_tuple %}
+                                <tr>
+                                    <td><input type="checkbox" value="{{item}}" name="mycheckbox"></td>
+                                    <td>{{item}}</td>
+                                </tr>
+                            {% endfor %}
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <br>
+            <div class="btns">
+                <button type="submit" class="btn btn-info" name="action"name="action" value="automate">Start</button>
+                <button type="submit" class="btn btn-danger" name="action" value="remove">Remove</button>
+            </div>
+        </form>
+          
     </div>
     
 </div>
