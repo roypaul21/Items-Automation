@@ -56,6 +56,18 @@ body {
 
 #home-con .add-item button{
     filter: drop-shadow(2px 2px 2px rgba(89, 87, 87, 1));
+    
+}
+
+#home-con .item-list .btns button{
+    filter: drop-shadow(2px 2px 2px rgba(89, 87, 87, 1));
+}
+
+
+
+#home-con .item-list .btns #automate{
+    background-color: rgba(138, 250, 136, 1);
+    border-color:rgba(138, 250, 136, 1) ;
 }
 
 
@@ -72,3 +84,15 @@ body {
 }
 
 
+/* result container */
+
+#auto-result {
+    text-align: center;
+    height: 100vh;
+    background-color: whitesmoke;
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

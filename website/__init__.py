@@ -8,7 +8,7 @@ def create_webapp(test_config=None):
 
     app.config.from_mapping(
         MYSQL_HOST="localhost",
-        MYSQL_DB="itemschema",  # Changed from MYSQL_DATABASE to MYSQL_DB
+        MYSQL_DB="itemschema",  
         MYSQL_USER="root",
         MYSQL_PASSWORD="Izakme!@#4",
     )
